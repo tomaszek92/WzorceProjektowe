@@ -43,6 +43,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dekorator\BitaSmietana.cs" />
+    <Compile Include="Dekorator\Czekolada.cs" />
+    <Compile Include="Dekorator\Expresso.cs" />
+    <Compile Include="Dekorator\Napoj.cs" />
+    <Compile Include="Dekorator\SkladnikDekorator.cs" />
+    <Compile Include="Dekorator\StarCaeSpecial.cs" />
+    <Compile Include="Fabryka\AmerykanskaPizzeria.cs" />
+    <Compile Include="Fabryka\Fabryki\AmerykanskaFabryka.cs" />
+    <Compile Include="Fabryka\Pizze\MiesnaPizza.cs" />
+    <Compile Include="Fabryka\Pizze\RodzajPizzy.cs" />
+    <Compile Include="Fabryka\Pizze\WegetarianskaPizza.cs" />
+    <Compile Include="Fabryka\Skladniki\Ciasta\Ciasto.cs" />
+    <Compile Include="Fabryka\Fabryki\IFabrykaSkladnikow.cs" />
+    <Compile Include="Fabryka\Pizze\Pizza.cs" />
+    <Compile Include="Fabryka\Pizzeria.cs" />
+    <Compile Include="Fabryka\Skladniki\Ciasta\CienkieChrupiaceCiasto.cs" />
+    <Compile Include="Fabryka\Skladniki\Ciasta\GrubeCiasto.cs" />
+    <Compile Include="Fabryka\Skladniki\Miesa\Mieso.cs" />
+    <Compile Include="Fabryka\Skladniki\Miesa\Peperoni.cs" />
+    <Compile Include="Fabryka\Skladniki\Sery\Chedar.cs" />
+    <Compile Include="Fabryka\Skladniki\Sery\Ser.cs" />
+    <Compile Include="Fabryka\Skladniki\Sery\SerReggiano.cs" />
+    <Compile Include="Fabryka\Skladniki\Sosy\BBQ.cs" />
+    <Compile Include="Fabryka\Skladniki\Sosy\Sos.cs" />
+    <Compile Include="Fabryka\Skladniki\Sosy\SosCzosnkowy.cs" />
+    <Compile Include="Fabryka\Skladniki\Warzywa\Cebula.cs" />
+    <Compile Include="Fabryka\Skladniki\Warzywa\CzerwonaPapryka.cs" />
+    <Compile Include="Fabryka\Skladniki\Warzywa\Warzywo.cs" />
+    <Compile Include="Fabryka\Fabryki\WloskaFabrykaSkladnikow.cs" />
+    <Compile Include="Fabryka\WloskaPizzeria.cs" />
     <Compile Include="Obserwator\DanePogodowe.cs" />
     <Compile Include="Obserwator\Kontrakty\IObserwator.cs" />
     <Compile Include="Obserwator\Kontrakty\IPodmiot.cs" />
@@ -53,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Singleton\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
