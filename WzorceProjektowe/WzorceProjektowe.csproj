@@ -78,14 +78,31 @@
     <Compile Include="Obserwator\Kontrakty\IPodmiot.cs" />
     <Compile Include="Obserwator\Kontrakty\IWyswietlElement.cs" />
     <Compile Include="Obserwator\WarunkiBiezaceWyswietlacz.cs" />
+    <Compile Include="Polecenie\ObslugaDrzwiGarazowych\DrzwiGarazowe.cs" />
+    <Compile Include="Polecenie\IPolecenie.cs" />
+    <Compile Include="Polecenie\ObslugaDrzwiGarazowych\PolecenieZamknijDrzwiGarazowe.cs" />
+    <Compile Include="Polecenie\ObslugaSwiatla\PolecenieWlaczSwiatlo.cs" />
+    <Compile Include="Polecenie\Pilot.cs" />
+    <Compile Include="Polecenie\PoleceniePuste.cs" />
+    <Compile Include="Polecenie\ObslugaSwiatla\PolecenieWylaczSwiatlo.cs" />
+    <Compile Include="Polecenie\ObslugaDrzwiGarazowych\PolecenieOtworzDrzwiGarazowe.cs" />
+    <Compile Include="Polecenie\ObslugaSwiatla\Swiatlo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton\Integer.cs" />
+    <Compile Include="Singleton\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Singleton\" />
+    <Folder Include="Adapter\" />
+    <Folder Include="Fasada\" />
+    <Folder Include="Iterator\" />
+    <Folder Include="Kompozyt\" />
+    <Folder Include="MetodaSzablonowa\" />
+    <Folder Include="Proxy\" />
+    <Folder Include="Stan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
