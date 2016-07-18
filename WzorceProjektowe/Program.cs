@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
+using WzorceProjektowe.Adapter;
 using WzorceProjektowe.Dekorator;
 using WzorceProjektowe.Fabryka;
 using WzorceProjektowe.Fabryka.Pizze;
+using WzorceProjektowe.Fasada;
 using WzorceProjektowe.Obserwator;
 using WzorceProjektowe.Polecenie;
 using WzorceProjektowe.Polecenie.ObslugaDrzwiGarazowych;
@@ -61,19 +63,38 @@ namespace WzorceProjektowe
 
             #region Polecenie
 
-            Pilot pilot = new Pilot();
+            //Pilot pilot = new Pilot();
 
-            Swiatlo swiatlo = new Swiatlo();
-            pilot.UstawPolecenie(0, new PolecenieWlaczSwiatlo(swiatlo), new PolecenieWylaczSwiatlo(swiatlo));
+            //Swiatlo swiatlo = new Swiatlo();
+            //pilot.UstawPolecenie(0, new PolecenieWlaczSwiatlo(swiatlo), new PolecenieWylaczSwiatlo(swiatlo));
 
-            DrzwiGarazowe drzwiGarazowe = new DrzwiGarazowe();
-            pilot.UstawPolecenie(2, new PolecenieOtworzDrzwiGarazowe(drzwiGarazowe),
-                new PolecenieZamknijDrzwiGarazowe(drzwiGarazowe));
+            //DrzwiGarazowe drzwiGarazowe = new DrzwiGarazowe();
+            //pilot.UstawPolecenie(2, new PolecenieOtworzDrzwiGarazowe(drzwiGarazowe),
+            //    new PolecenieZamknijDrzwiGarazowe(drzwiGarazowe));
 
-            pilot.WcisnietoPrzyciskWlacz(0);
-            pilot.WcisnietoPrzyciskWstecz();
+            //pilot.WcisnietoPrzyciskWlacz(0);
+            //pilot.WcisnietoPrzyciskWstecz();
 
-            Console.WriteLine(pilot);
+            //Console.WriteLine(pilot);
+
+            #endregion
+
+            #region Adapter
+
+            //DzikaKaczka dzikaKaczka = new DzikaKaczka();
+            //DzikiIndyk dzikiIndyk = new DzikiIndyk();
+            //IndykAdapter indykAdapter = new IndykAdapter(dzikiIndyk);
+            //indykAdapter.Kwacz();
+            //indykAdapter.Lataj();
+
+            #endregion
+
+            #region Fasada
+
+            FasadaStudiaMuzycznego fasadaStudiaMuzycznego = new FasadaStudiaMuzycznego(new OdtwarzaczCd(),
+                new Oswietlenie(), new Wzmaczniacz());
+
+            fasadaStudiaMuzycznego.OdtwarzajCd();
 
             #endregion
 

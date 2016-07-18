@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\DzikaKaczka.cs" />
+    <Compile Include="Adapter\DzikiIndyk.cs" />
+    <Compile Include="Adapter\IIndyk.cs" />
+    <Compile Include="Adapter\IndykAdapter.cs" />
+    <Compile Include="Adapter\IKaczka.cs" />
     <Compile Include="Dekorator\BitaSmietana.cs" />
     <Compile Include="Dekorator\Czekolada.cs" />
     <Compile Include="Dekorator\Expresso.cs" />
@@ -73,6 +78,13 @@
     <Compile Include="Fabryka\Skladniki\Warzywa\Warzywo.cs" />
     <Compile Include="Fabryka\Fabryki\WloskaFabrykaSkladnikow.cs" />
     <Compile Include="Fabryka\WloskaPizzeria.cs" />
+    <Compile Include="Fasada\FasadaStudiaMuzycznego.cs" />
+    <Compile Include="Fasada\Kontrakty\IOdtwarzaczCd.cs" />
+    <Compile Include="Fasada\Kontrakty\IOswietlenie.cs" />
+    <Compile Include="Fasada\Kontrakty\IWzmaczniacz.cs" />
+    <Compile Include="Fasada\OdtwarzaczCd.cs" />
+    <Compile Include="Fasada\Oswietlenie.cs" />
+    <Compile Include="Fasada\Wzmaczniacz.cs" />
     <Compile Include="Obserwator\DanePogodowe.cs" />
     <Compile Include="Obserwator\Kontrakty\IObserwator.cs" />
     <Compile Include="Obserwator\Kontrakty\IPodmiot.cs" />
@@ -96,8 +108,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Adapter\" />
-    <Folder Include="Fasada\" />
     <Folder Include="Iterator\" />
     <Folder Include="Kompozyt\" />
     <Folder Include="MetodaSzablonowa\" />
