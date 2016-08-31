@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Threading.Tasks;
-using WzorceProjektowe.Adapter;
-using WzorceProjektowe.Dekorator;
-using WzorceProjektowe.Fabryka;
-using WzorceProjektowe.Fabryka.Pizze;
-using WzorceProjektowe.Fasada;
-using WzorceProjektowe.Obserwator;
-using WzorceProjektowe.Polecenie;
-using WzorceProjektowe.Polecenie.ObslugaDrzwiGarazowych;
-using WzorceProjektowe.Polecenie.ObslugaSwiatla;
+using WzorceProjektowe.Kompozyt;
 using WzorceProjektowe.Singleton;
 
 namespace WzorceProjektowe
@@ -91,10 +82,44 @@ namespace WzorceProjektowe
 
             #region Fasada
 
-            FasadaStudiaMuzycznego fasadaStudiaMuzycznego = new FasadaStudiaMuzycznego(new OdtwarzaczCd(),
-                new Oswietlenie(), new Wzmaczniacz());
+            //FasadaStudiaMuzycznego fasadaStudiaMuzycznego = new FasadaStudiaMuzycznego(new OdtwarzaczCd(),
+            //    new Oswietlenie(), new Wzmaczniacz());
 
-            fasadaStudiaMuzycznego.OdtwarzajCd();
+            //fasadaStudiaMuzycznego.OdtwarzajCd();
+
+            #endregion
+
+            #region Metoda Szablonowa
+
+            //new Herbata().Przygotuj();
+            //Console.WriteLine();
+            //new Kawa().Przygotuj();
+
+            #endregion
+
+            #region Iterator
+
+            //Kelnerka kelnerka = new Kelnerka();
+            //kelnerka.DrukujMenuPrzyPomocyIEnumerable();
+
+            #endregion
+
+            #region Kozpozyt
+
+            MenuSkladnik pancakeHouseMenu = new Menu("MENU PANCAKE HOUSE", "Śniadania");
+            pancakeHouseMenu.Dodaj(new PozycjaMenu("Naleśnik", "Naleśnik z truskawkami", true, 25.0));
+            pancakeHouseMenu.Dodaj(new PozycjaMenu("Herbata", "Herbata z cytryną", true, 9.89));
+
+            MenuSkladnik dinerMenu = new Menu("MENU RESTAURACJA DINER", "Obiady");
+            dinerMenu.Dodaj(new PozycjaMenu("Spaghetti", "Spaghetii z mięsem", false, 29.0));
+            dinerMenu.Dodaj(new PozycjaMenu("Zupa pomidorowa", "", true, 15.0));
+
+            MenuSkladnik wszystkieMenu = new Menu("WSZYSTKIE MENU", "Wszystko");
+
+            wszystkieMenu.Dodaj(pancakeHouseMenu);
+            wszystkieMenu.Dodaj(dinerMenu);
+
+            wszystkieMenu.Drukuj();
 
             #endregion
 

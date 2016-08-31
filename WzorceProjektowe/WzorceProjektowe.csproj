@@ -85,6 +85,21 @@
     <Compile Include="Fasada\OdtwarzaczCd.cs" />
     <Compile Include="Fasada\Oswietlenie.cs" />
     <Compile Include="Fasada\Wzmaczniacz.cs" />
+    <Compile Include="Iterator\DinerMenu.cs" />
+    <Compile Include="Iterator\DinerMenuIterator.cs" />
+    <Compile Include="Iterator\IMenu.cs" />
+    <Compile Include="Iterator\IMenuIterator.cs" />
+    <Compile Include="Iterator\Kelnerka.cs" />
+    <Compile Include="Iterator\PancakeHouseMenu.cs" />
+    <Compile Include="Iterator\PancakeHouseMenuIterator.cs" />
+    <Compile Include="Iterator\PozycjaMenu.cs" />
+    <Compile Include="Kompozyt\Kelnerka.cs" />
+    <Compile Include="Kompozyt\Menu.cs" />
+    <Compile Include="Kompozyt\MenuSkladnik.cs" />
+    <Compile Include="Kompozyt\PozycjaMenu.cs" />
+    <Compile Include="MetodaSzablonowa\Herbata.cs" />
+    <Compile Include="MetodaSzablonowa\Kawa.cs" />
+    <Compile Include="MetodaSzablonowa\Napoj.cs" />
     <Compile Include="Obserwator\DanePogodowe.cs" />
     <Compile Include="Obserwator\Kontrakty\IObserwator.cs" />
     <Compile Include="Obserwator\Kontrakty\IPodmiot.cs" />
@@ -108,9 +123,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Iterator\" />
-    <Folder Include="Kompozyt\" />
-    <Folder Include="MetodaSzablonowa\" />
     <Folder Include="Proxy\" />
     <Folder Include="Stan\" />
   </ItemGroup>
