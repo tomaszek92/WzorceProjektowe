@@ -1,5 +1,12 @@
 ﻿using System;
+using WzorceProjektowe.Dekorator;
+using WzorceProjektowe.Dekorator.Dodatki;
+using WzorceProjektowe.Dekorator.Napoje;
+using WzorceProjektowe.Fabryka;
+using WzorceProjektowe.Fabryka.AbstrykacyjnaFabryka;
+using WzorceProjektowe.Fabryka.Laptopy;
 using WzorceProjektowe.Kompozyt;
+using WzorceProjektowe.Obserwator;
 using WzorceProjektowe.Singleton;
 
 namespace WzorceProjektowe
@@ -10,22 +17,39 @@ namespace WzorceProjektowe
         {
             #region Obserwator
 
-            //DanePogodowe danePogodowe = new DanePogodowe();
-            //WarunkiBiezaceWyswietlacz warunkiBiezaceWyswietlacz = new WarunkiBiezaceWyswietlacz(danePogodowe);
+            //SprawdzaczPogody sprawdzaczPogody = new SprawdzaczPogody();
+            //sprawdzaczPogody.DodajObserwatora(new FirmaOgrodnicza());
+            //sprawdzaczPogody.DodajObserwatora(new Hotel());
 
-            //danePogodowe.Ustaw(22.2f, 34f, 1000);
-            //danePogodowe.Ustaw(22.2f, 44f, 999);
-            //danePogodowe.Ustaw(22.2f, 14f, 1000);
+            //sprawdzaczPogody.Ustaw(new Pogoda
+            //{
+            //    Zachmurzenie = Zachmurzenie.Bezchmurnie,
+            //    Temperatura = 25,
+            //    Opady = 0,
+            //    Cisnienie = 1000,
+            //    Wilgotnosc = 50
+            //});
+
+            //Console.WriteLine();
+
+            //sprawdzaczPogody.Ustaw(new Pogoda
+            //{
+            //    Zachmurzenie = Zachmurzenie.CalkowiteZachmurzenie,
+            //    Opady = 25,
+            //    Wilgotnosc = 65,
+            //    Temperatura = 10,
+            //    Cisnienie = 987
+            //});
 
             #endregion
 
             #region Dekorator
 
-            //Napoj napoj1 = new Expresso();
-            //napoj1 = new Czekolada(new BitaSmietana(napoj1));
+            //Napoj napoj1 = new Kawa();
+            //napoj1 = new Mleko(new BitaSmietana(napoj1));
 
-            //Napoj napoj2 = new StarCaeSpecial();
-            //napoj2 = new Czekolada(napoj2);
+            //Napoj napoj2 = new Herbata();
+            //napoj2 = new Mleko(new BitaSmietana(new Cukier(napoj2)));
 
             //Console.WriteLine($"Napoj1 : {napoj1.Opis}, cena: {napoj1.Cena}");
             //Console.WriteLine($"Napoj2 : {napoj2.Opis}, cena: {napoj2.Cena}");
@@ -34,11 +58,13 @@ namespace WzorceProjektowe
 
             #region Fabryka
 
-            //Pizzeria pizzeria = new WloskaPizzeria();
+            Laptop msiLaptop = new MsiLaptop();
+            msiLaptop.Stworz(new LaptopDoGierFabryka());
+            Console.WriteLine(msiLaptop.WyswietlDane());
 
-            //Pizza pizza = pizzeria.Zamow(RodzajPizzy.Miesna);
-
-            //Console.WriteLine(pizza);
+            Laptop dellLaptop = new DellLaptop();
+            dellLaptop.Stworz(new LaptopBiznesowyFabryka());
+            Console.WriteLine(dellLaptop.WyswietlDane());
 
             #endregion
 
@@ -106,20 +132,20 @@ namespace WzorceProjektowe
 
             #region Kozpozyt
 
-            MenuSkladnik pancakeHouseMenu = new Menu("MENU PANCAKE HOUSE", "Śniadania");
-            pancakeHouseMenu.Dodaj(new PozycjaMenu("Naleśnik", "Naleśnik z truskawkami", true, 25.0));
-            pancakeHouseMenu.Dodaj(new PozycjaMenu("Herbata", "Herbata z cytryną", true, 9.89));
+            //MenuSkladnik pancakeHouseMenu = new Menu("MENU PANCAKE HOUSE", "Śniadania");
+            //pancakeHouseMenu.Dodaj(new PozycjaMenu("Naleśnik", "Naleśnik z truskawkami", true, 25.0));
+            //pancakeHouseMenu.Dodaj(new PozycjaMenu("Herbata", "Herbata z cytryną", true, 9.89));
 
-            MenuSkladnik dinerMenu = new Menu("MENU RESTAURACJA DINER", "Obiady");
-            dinerMenu.Dodaj(new PozycjaMenu("Spaghetti", "Spaghetii z mięsem", false, 29.0));
-            dinerMenu.Dodaj(new PozycjaMenu("Zupa pomidorowa", "", true, 15.0));
+            //MenuSkladnik dinerMenu = new Menu("MENU RESTAURACJA DINER", "Obiady");
+            //dinerMenu.Dodaj(new PozycjaMenu("Spaghetti", "Spaghetii z mięsem", false, 29.0));
+            //dinerMenu.Dodaj(new PozycjaMenu("Zupa pomidorowa", "", true, 15.0));
 
-            MenuSkladnik wszystkieMenu = new Menu("WSZYSTKIE MENU", "Wszystko");
+            //MenuSkladnik wszystkieMenu = new Menu("WSZYSTKIE MENU", "Wszystko");
 
-            wszystkieMenu.Dodaj(pancakeHouseMenu);
-            wszystkieMenu.Dodaj(dinerMenu);
+            //wszystkieMenu.Dodaj(pancakeHouseMenu);
+            //wszystkieMenu.Dodaj(dinerMenu);
 
-            wszystkieMenu.Drukuj();
+            //wszystkieMenu.Drukuj();
 
             #endregion
 
